@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./sidebar.css"
 import Logo from "../../images/logo2.png"
 import {GridViewRounded, GroupWorkRounded, PeopleRounded, Inventory2Rounded, ExitToAppRounded} from "@mui/icons-material"
+import { Link, useLocation } from 'react-router-dom'
 
 function Sidebar() {
+  const location = useLocation().pathname;
+  const [path, setPath] = useState("")
+  // const [path, setPath] = useState("")
+
+  useEffect(()=>{
+    setPath(location);
+   
+  }, [location])
+
+  const closeNav = () => {
+    document.getElementById("sidebar").style.display = "none";
+  }   
+
+  const changePathAndClose = (path) => {
+    if(window.innerWidth<=992){
+       closeNav()
+    }
+    setPath(path);
+  }
 
   return (
     <div className='sidebar'>
@@ -12,21 +32,46 @@ function Sidebar() {
           <img src={Logo} alt="logo"/>
         </div>
         <ul>
-          <li className='link selected'>
-            <GridViewRounded/>
-            Dashboard
+          <li className='link'>
+            <Link to="/"
+            className={path.includes("dashboard") || path==="dashboard"
+            ?"selected"
+            :""}
+            onClick={()=>changePathAndClose("dashboard") }
+            >
+              <GridViewRounded/>
+              Dashboard
+            </Link>
           </li>
           <li className='link'>
-            <GroupWorkRounded/>
-            Team Members
+            <Link to="/team" 
+            className={path.includes("team") || path==="team"
+            ?"selected"
+            :""}
+            onClick={()=>changePathAndClose("team") }>
+              <GroupWorkRounded/>
+              Team Members
+            </Link>
           </li>
           <li className='link'>
-            <PeopleRounded/>
-            Clients
+            <Link to="/clients" 
+            className={path.includes("clients") || path==="clients"
+            ?"selected"
+            :""}
+            onClick={()=>changePathAndClose("clients") }>
+              <PeopleRounded/>
+              Clients
+            </Link>
           </li>
           <li className='link'>
-            <Inventory2Rounded/>
-            Products
+            <Link to="/products" 
+            className={path.includes("products") || path==="products"
+            ?"selected"
+            :""}
+            onClick={()=>changePathAndClose("products")}>
+              <Inventory2Rounded/>
+              Products
+            </Link>
           </li>
         </ul>
       </div>
@@ -35,10 +80,11 @@ function Sidebar() {
           <div className='line_container'>
           </div>
           <div className='logout_container'>
+            <Link to="/login">
           <ExitToAppRounded />
             <p>
               Logout
-            </p>
+            </p></Link>
         </div>
       </div>
     </div>

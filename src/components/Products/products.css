@@ -1,0 +1,40 @@
+.products .error{
+    text-align: center;
+    color: red;
+    font-weight: 600;
+}
+.products_container{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.product_table{
+    width: 100%;
+    border-spacing: 15px;
+}
+tr, td{
+    border-color:#9ca4a4;
+}
+.product_th{
+    text-align: left;
+    
+}
+.products_card_image{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.products_card_image img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.net_price, .taxes{
+    font-weight: 400;
+}
+.price{
+    color: #1c9941;
+}

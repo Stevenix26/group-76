@@ -4,6 +4,9 @@ import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import ProtectedRoutes from './components/ProtectedRoutes/ProtectedRoutes';
 import Home from './pages/Home/Home';
+// import Team from './components/Team/Team';
+// import Clients from './components/Clients/Clients';
+// import Products from './components/Products/Products';
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
 
           <Route element={<ProtectedRoutes /> } >
             <Route path="/*" element={<Home />}/>
+            {/* <Route path='/dashboard/team' element={<Team />} />
+            <Route path='/dashboard/clients' element={<Clients />} />
+            <Route path='/dashboard/products' element={<Products />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

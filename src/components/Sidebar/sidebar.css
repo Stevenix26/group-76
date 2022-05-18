@@ -1,4 +1,6 @@
 .sidebar{
+    position: sticky;
+    top: 0;
     flex: 1;
     height: 100vh;
     background: #000000;
@@ -31,30 +33,40 @@
     margin: 0px;
     padding: 0px;
 }
+
 .links_container li{
     text-decoration: none;
     list-style: none;
     margin: 10px 0px;
-    padding: 0px 25px;
     cursor: pointer;
     display: flex;
     align-items: center;
+}
+.links_container li a{
+    text-decoration: none;
+    padding: 0px 25px;
+    color: #9a9a9a;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.links_container a:hover{
+    color: #ffffff;
+    border-left: #ffffff 2px solid;
 }
 .links_container li svg{
     height: 16px;
     margin-right: 20px;
 }
-.links_container .selected{
+.links_container a.selected{
     color: #ffffff;
     border-left: #ffffff 2px solid;
 }
 .links_container .selected:hover{
     color: #9a9a9a;
-
 }
 .links_container li:hover{
     color: #ffffff;
-    border-left: #ffffff 2px solid;
 }
 .line_container{
     height: 2px;
@@ -62,12 +74,17 @@
     color: #ffffff;
 }
 .logout_container{
-    display: flex;
-    align-items: center;
-    padding: 10px 25px;
+    
     margin-bottom: 20px;
     cursor: pointer;
     color: #ffffff;
+}
+.logout_container a{
+    display: flex;
+    align-items: center;
+    padding: 10px 25px;
+    color: #fff;
+    text-decoration: none;
 }
 .logout_container svg{
     margin-right: 20px;
@@ -75,6 +92,6 @@
 .logout_container p{
     font-weight: 600;
 }
-.logout_container:hover{
+.logout_container a:hover{
     color: #9a9a9a;
 }
