@@ -1,0 +1,22 @@
+tr,
+td {
+    border-color: #9ca4a4;
+}
+
+.team .error {
+    text-align: center;
+    color: red;
+    font-weight: 600;
+}
+
+.team_container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.team_table {
+    width: 100%;
+    border-spacing: 15px;
+}

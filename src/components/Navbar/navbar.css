@@ -11,13 +11,14 @@
     box-shadow: 0px 3px 5px 0px  #e4e4e4;
 
 }
-.logo{
-    font-size: 24px;
-    font-weight: 900;
-    padding: 0;
-    margin: 0%;
-    color: #214882;
-    cursor: pointer;
+.navbar .logo_container{
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.navbar .logo_container img{
+    height: 60px;
 }
 
 .button_container button{

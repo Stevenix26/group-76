@@ -1,3 +1,7 @@
+.dashboard{
+    width: 100%;
+    box-sizing: border-box;
+}
 .features{
     width: 100%;
     display: flex;
@@ -44,6 +48,7 @@
     margin: 20px;
     padding: 20px;
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-sizing: border-box;
 }
 .chartTitle{
     margin-bottom: 20px;
@@ -66,7 +71,10 @@
     align-items: center;
     padding: 15px 0px;
     border-top: 1px solid #9ca4a4;
-    
+    cursor: pointer;
+}
+.event:hover{
+    box-shadow: inset 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 .event.last{
     border-bottom: 1px solid #9ca4a4;
@@ -79,7 +87,7 @@
     color: #495050;
 }
 .eventIcon{
-    color: #1c9941;
+    color: #214882;
     margin-right: 10px;
 }
 .event_title{
@@ -93,7 +101,7 @@
     text-align: center;
     font-size: 14px;
     color: #fff;
-    background-color: #1c9941;
+    background-color: #214882;
 }
 .large_widget{
     flex: 2;
@@ -106,6 +114,16 @@
 }
 .widget_th{
     text-align: left;
+}
+.widget_table .content:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    box-shadow:  0 0 5px  rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 5px  rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 5px  rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 5px  rgba(0,0,0,0.6);
 }
 .widget_table_user{
     display: flex;
@@ -135,5 +153,22 @@
 }
 .widget_status .active{
     color: #fff;
-    background-color: #1c9941;
+    background-color: #214882;
+}
+@media screen and (max-width:992px){
+    .features{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .featureItem{
+        padding: 15px;
+        margin: 0px 10px;
+        width: 100%;
+    }
+    .dashboard_widget{
+        flex-direction: column;
+    }
+    .recharts-responsive-container{
+        width: 50%;
+    }
 }

@@ -95,3 +95,10 @@
 .logout_container a:hover{
     color: #9a9a9a;
 }
+@media screen and (max-width:992px){
+    .sidebar{
+        position: fixed;
+        z-index: 2;
+        top: 0;
+    }
+}

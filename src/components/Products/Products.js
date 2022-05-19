@@ -10,7 +10,6 @@ function Products() {
   useEffect(() => {
     axios.get(url)
     .then(response => {
-      console.log(response)
       if(response.status === 200){
         setStatusNote("")
         setProductItems(response.data.data)
@@ -20,8 +19,6 @@ function Products() {
     })
 
   }, [])
-  
-  console.log(productItems)
 
   return (
     <div className='products'>
@@ -42,8 +39,7 @@ function Products() {
               </tr>
       {
         productItems ? productItems.map((productItem, id )=> (
-          
-          <tr key={id} className='product_table_tr'>
+          <tr key={id} className='product_table_tr table_item'>
           <td>{id+1}</td>
             <td className='products_card_image'>
               <img src={productItem.image} alt="product" />
